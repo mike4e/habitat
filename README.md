@@ -9,7 +9,7 @@ The objective is to design and deploy a Production ready web service in AWS with
 
 ## High Level Plan
 * use Terraform to provision multiple hosts, either using multiple EC2 instances or Beanstalk (which may provide auto-scaling)
-* Use ALB to load balance, as configured either separatelly or as part of Beanstalk
+* Use ALB to load balance, configured either as part of Beanstalk, or separately with Terraform
 * use Ansible to configure a web server/application on the instances provisioned by Terraform
 
 ## Points to consider (TBD)
