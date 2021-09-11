@@ -17,3 +17,20 @@ The objective is to design and deploy a Production ready web service in AWS with
 * Capacity and growth
 * Deploying to a Production environment that has VMs already running.
 
+## Notes
+* `revo` is the local host that I am driving the work from
+
+## Prerequisites
+* aws cli on `revo`
+````
+mike@revo:~$ aws --version
+aws-cli/1.18.69 Python/3.8.10 Linux/5.4.0-84-generic botocore/1.16.19
+mike@revo:~$
+````
+* terraform on `revo`
+```
+mike@revo:~$ terraform -v
+Terraform v1.0.6
+on linux_amd64
+mike@revo:~$
+```
