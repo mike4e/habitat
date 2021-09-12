@@ -77,7 +77,7 @@ resource "aws_security_group_rule" "ssh" {
 }
 
 ```
-### define some Terraform outputs so we can the details of our instances 
+### define some Terraform outputs so we can see the details of our instances 
 ```
 mike@revo:~/git/mike4e/habitat$ cat terraform/ec2-instance/outputs.tf
 output "ec2_server1_instance_id" {
@@ -142,10 +142,10 @@ mike@revo:~/git/mike4e/habitat/terraform/ec2-instance$
 ```
 
 ### plan
+```
 mike@revo:~/git/mike4e/habitat/terraform/ec2-instance$ terraform plan
 ...
 ```
-
 ### apply
 ```
 mike@revo:~/git/mike4e/habitat/terraform/ec2-instance$ terraform apply
@@ -163,7 +163,6 @@ ec2_server2_instance_public_dns = "ec2-52-56-201-248.eu-west-2.compute.amazonaws
 ec2_server2_instance_public_ip = "52.56.201.248"
 mike@revo:~/git/mike4e/habitat/terraform/ec2-instance$
 ```
-
 ### check on AWS
 ```
 mike@revo:~/git/mike4e/habitat/terraform$ aws ec2 describe-instances | grep Public
@@ -181,7 +180,6 @@ mike@revo:~/git/mike4e/habitat/terraform$ aws ec2 describe-instances | grep Publ
                                         "PublicIp": "3.8.136.28"
 mike@revo:~/git/mike4e/habitat/terraform$
 ```
-
 ### login and check the hosts
 ```
 mike@revo:~$ ssh ubuntu@ec2-52-56-201-248.eu-west-2.compute.amazonaws.com
