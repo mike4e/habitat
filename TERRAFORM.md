@@ -200,3 +200,8 @@ ubuntu@ip-172-31-26-92:~$ uname -a
 Linux ip-172-31-26-92 5.4.0-1045-aws #47-Ubuntu SMP Tue Apr 13 07:02:25 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
 ubuntu@ip-172-31-26-92:~$
 ```
+
+## next
+
+configure the webserver with [Ansible](/ANSIBLE.md)
+
