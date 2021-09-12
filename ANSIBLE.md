@@ -193,3 +193,6 @@ mike@revo:~/git/mike4e/habitat/ansible/apache$ curl http://ec2-52-56-201-248.eu-
 mike@revo:~/git/mike4e/habitat/ansible/apache$
 
 ```
+## next
+
+configure a load balancer with [ALB](/ALB.md)
