@@ -22,10 +22,16 @@ The objective is to design and deploy a Production ready web service in AWS with
    * using Beanstalk might be a simpler way to deploy a scalable web application
 * Deploying to a Production environment that has VMs already running.
 
-## Notes
-* `revo` is the local host that I am driving the work from
+## Action
+### Terraform - provision the EC2 hosts
+ *  [Terraform](/TERRAFORM.md)
+### Ansible - configure the web server and application
+ *  [Ansible](/ANSIBLE.md)
+### ALB - configured manually
+ *  [ALB](/ALB.md)
 
 ## Prerequisites
+note:  `revo` is the local host that I am driving the work from
 * a public key (`mikey`) has been added via the AWS console
 * terraform has been installed on `revo`
 ```
@@ -40,7 +46,7 @@ mike@revo:~$ aws --version
 aws-cli/1.18.69 Python/3.8.10 Linux/5.4.0-84-generic botocore/1.16.19
 mike@revo:~$
 ```
-* the aws cli has been installed and configured 
+* aws cli configured for use
 ```
 mike@revo:~$ cat ~/.aws/config
 [default]
@@ -66,17 +72,11 @@ mike@revo:~$ aws iam list-users
 mike@revo:~$
 ```
 
-## Action
-### Terraform - provision the EC2 hosts
- *  [Terraform](/TERRAFORM.md)
-### Ansible - configure the web server and application
- *  [Ansible](/ANSIBLE.md)
-### ALB - configured manually
- *  [ALB](/ALB.md)
 ## Gotchas
 * login to the Ubuntu instances with "ubuntu" used not "ec2-user"
 * terraform was not able change the description of a security group
    * terraform  to remove the sg but as it was in use it just times out and never does anything
+
 ## Resources
 * https://docs.aws.amazon.com/cli/latest/reference/
 * https://learn.hashicorp.com/tutorials/terraform/aws-build
