@@ -36,6 +36,7 @@ The objective is to design and deploy a Production ready web service in AWS with
 
 load balancer on 443
    * https://balance1-1506060314.eu-west-2.elb.amazonaws.com/
+   
 individual webservers on 8080
    * http://ec2-52-56-201-248.eu-west-2.compute.amazonaws.com:8080/
    * http://ec2-3-8-136-28.eu-west-2.compute.amazonaws.com:8080/
