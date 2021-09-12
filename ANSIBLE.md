@@ -145,6 +145,8 @@ ec2_server2                : ok=11   changed=3    unreachable=0    failed=0    s
 mike@revo:~/git/mike4e/habitat/ansible/apache$
 ```
 ## check
+* the webserver is running on 8080
+* curl can grab the default page
 ### ec2_server1
 
 ```
