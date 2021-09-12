@@ -16,22 +16,25 @@ The objective is to design and deploy a Production ready web service in AWS with
 ## Points to consider 
 * Monitoring and maintainability
    * investigate using CloudWatch to monitor the service/servers
+   * monitor from outside of AWS 
+   * attempt to simulate customer experience
 * Capacity and growth
-   * provision more servers!
+   * provision more servers
    * investigate EC2 Auto Scaling 
    * using Beanstalk might be a simpler way to deploy a scalable web application
 * Deploying to a Production environment that has VMs already running
-   *  be cautious! 
+   *  be cautious
    *  run any changes against a dev environment
    *  make good use of `plan` and `check` to make sure we know what terraform and ansible are doing
+   *  ensure you have a rollback plan
 
 ## Rollout
 ### Terraform - provision the EC2 hosts
- *  [Terraform](/TERRAFORM.md)
+ *  [Terraform rollout notes](/TERRAFORM.md)
 ### Ansible - configure the web server and application
- *  [Ansible](/ANSIBLE.md)
+ *  [Ansible rollout notes](/ANSIBLE.md)
 ### ALB - configured manually
- *  [ALB](/ALB.md)
+ *  [ALB rollout notes](/ALB.md)
 ## Results
 
 load balancer on 443
