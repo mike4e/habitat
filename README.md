@@ -20,7 +20,10 @@ The objective is to design and deploy a Production ready web service in AWS with
    * provision more servers!
    * investigate EC2 Auto Scaling 
    * using Beanstalk might be a simpler way to deploy a scalable web application
-* Deploying to a Production environment that has VMs already running.
+* Deploying to a Production environment that has VMs already running
+   *  be cautious! 
+   *  run any changes against a dev environment
+   *  make good use of `plan` and `check` to make sure we know what terraform and ansible are doing
 
 ## Action
 ### Terraform - provision the EC2 hosts
@@ -75,7 +78,9 @@ mike@revo:~$
 ## Gotchas
 * login to the Ubuntu instances with "ubuntu" used not "ec2-user"
 * terraform was not able change the description of a security group
-   * terraform  to remove the sg but as it was in use it just times out and never does anything
+   * terraform was unable to remove the security group because it was in use
+* ansible would not run against the `habitat` host group, but only worked when specifying the individual hosts
+   * it seemed to not like the password for the ssh key when using the group, even though it was fine when run against the host
 
 ## Resources
 * https://docs.aws.amazon.com/cli/latest/reference/
