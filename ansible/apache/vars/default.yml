@@ -1,0 +1,5 @@
+---
+app_user: "www-data"
+http_conf: "habitat.conf"
+http_port: "8080"
+disable_default: true
