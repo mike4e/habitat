@@ -1,6 +1,6 @@
 # AWS ALB (Application Load Balancer)
 note: Due to lack of experience with Terraform and AWS, the ALB was defined manually using the AWS console
-## generate a self-signed key for use with the ALB
+## generate a self-signed SSL certificate for use with the ALB
 ```
 mike@revo:~/git/mike4e/habitat/cert$  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificate.crt
 Generating a RSA private key
