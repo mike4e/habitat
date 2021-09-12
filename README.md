@@ -1,5 +1,5 @@
 # habitat
-Terraform and Ansible testing with AWS
+Home Assignment Before Interview (Terraform Ansible Things)
 
 ## Objective
 The objective is to design and deploy a Production ready web service in AWS with the following criteria:
@@ -39,14 +39,15 @@ The objective is to design and deploy a Production ready web service in AWS with
 
 load balancer on 443
    * https://balance1-1506060314.eu-west-2.elb.amazonaws.com/
-   
+      * note: your browser will complain because it using a self-signed certificate
+
 individual webservers on 8080
    * http://ec2-52-56-201-248.eu-west-2.compute.amazonaws.com:8080/
    * http://ec2-3-8-136-28.eu-west-2.compute.amazonaws.com:8080/
 
 ## Prerequisites
 note:  `revo` is the local host that I am driving the work from
-* a public key (`mikey`) has been added via the AWS console
+* a public ssh key (`mikey`) has been added via the AWS console
 * terraform has been installed on `revo`
 ```
 mike@revo:~$ terraform -v
@@ -60,7 +61,7 @@ mike@revo:~$ aws --version
 aws-cli/1.18.69 Python/3.8.10 Linux/5.4.0-84-generic botocore/1.16.19
 mike@revo:~$
 ```
-* aws cli configured for use
+* aws cli configured for use by a non-root user
 ```
 mike@revo:~$ cat ~/.aws/config
 [default]
