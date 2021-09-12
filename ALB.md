@@ -124,3 +124,4 @@ mike@revo:~$ aws elbv2 describe-load-balancers
 ## test
 connecting to this URL round-robins connections to the two webserver when you refresh the browser
 * https://balance1-1506060314.eu-west-2.elb.amazonaws.com/
+  * note: your browser will complain because it using a self-signed certificate
