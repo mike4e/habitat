@@ -29,7 +29,6 @@ RSA key ok
 
 mike@revo:~/git/mike4e/habitat/cert$ openssl x509 -in certificate.crt -text -noout
 
-
 mike@revo:~/git/mike4e/habitat/cert$ openssl rsa -in privateKey.key -text > private.pem
 writing RSA key
 mike@revo:~/git/mike4e/habitat/cert$ openssl x509 -inform PEM -in certificate.crt > public.pem
@@ -45,6 +44,8 @@ mike@revo:~/git/mike4e/habitat/cert$
 ```
 
 ## define a target group for the load balancer
+
+![targets](https://user-images.githubusercontent.com/1073559/132988887-0e2dcfc8-53f6-45e4-88e2-ebe7bea4ec34.png)
 
 ```
 mike@revo:~$ aws elbv2 describe-target-groups
@@ -79,6 +80,9 @@ mike@revo:~$
 ## define a load balancer
 * upload the certificate created above
 * listen on 443 and forward to the target group defined above
+
+![balance1](https://user-images.githubusercontent.com/1073559/132988890-7c42463d-386f-4738-909f-b1637e7b665f.png)
+
 
 ```
 mike@revo:~$ aws elbv2 describe-load-balancers
